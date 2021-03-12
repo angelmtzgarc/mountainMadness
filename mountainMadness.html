@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>The Mountains of Madness </title>
+    <link rel="stylesheet" href="mountainMadness.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!--image slider start-->
+        <div class="slider">
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <img src="1.jpg" alt="">
+                    <diV class="texto">
+                        <h1>Nice Weather</h1>
+                    </diV>
+                </div>
+                <div class="slide">
+                    <img src="2.jpg" alt="">
+                    <diV class="texto">
+                        <h1>Stunning Architecture</h1>
+                    </diV>
+                </div>
+                <div class="slide">
+                    <img src="3.jpg" alt="">
+                    <diV class="texto">
+                        <h1>Unbelievable Wildlife</h1>
+                    </diV>
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
+
+
+        <div class="Portada">
+            <header>
+                <p> Visit The Mountains of Madness</p>
+            </header>
+        </div>
+        <div class="Mapa">
+            <div class="texto">
+                <h2>Location</h2>
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18884259.318413295!2d77.44324879999984!3d-73.20870983500394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1611079520924!5m2!1ses-419!2smx" width="600" height="450" frameborder="0"
+                    style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <div class="Reservacion">
+            <div class="texto">
+                <h2> Book your travel</h2>
+            </div>
+            <div class="forma">
+                <form>
+                    Full Name:<br>
+                    <input class="input-text" type="text" class="whitespace">
+                    <br><br>E-mail:<br>
+                    <input class="input-text" type="text" class="whitespace">
+                    <br><br>Phone Number:<br>
+                    <input class="input-text" type="text"> <br>
+                    <br>Booking Date:<br>
+                    <input type="date">
+                    <br><br>
+                    <input class="btn" type="button" value="Confirm" onclick="losentimos()">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright 2021</p>
+    </footer>
+
+
+    <script src="mountainMadness.js"></script>
+</body>
