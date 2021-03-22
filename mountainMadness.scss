@@ -1,6 +1,6 @@
-$bg-cl:#6AABD2;
-$ft-cl:#D9E4EC;
-$glass:#b7cfdc73;
+$bg-cl:#6AABD2; //color de fondo
+$ft-cl:#D9E4EC; // color de la fuente
+$glass:#b7cfdc73; // fondo para la forma
 html {
     -webkit-background-size: 100% 100% cover;
     -moz-background-size: 100% 100% cover;
@@ -14,6 +14,7 @@ html {
     font-family: 'Playfair Display', serif;
 }
 
+//Contenedor del grid
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -23,9 +24,7 @@ html {
     color: $ft-cl;
 }
 
-
-/*Slider ----- start */
-
+//Slider ----- inicio 
 .slider {
     position: relative;
     margin: auto;
@@ -70,9 +69,7 @@ html {
     text-shadow: 3px 3px 2px $bg-cl;
 }
 
-
-/*css for manual slide navigation*/
-
+// Navegacion manual del slider
 .navigation-manual {
     position: absolute;
     width: 800px;
@@ -110,9 +107,7 @@ html {
     margin-left: -40%;
 }
 
-
-/*css for automatic navigation*/
-
+// Navegacion automatica del slider
 .navigation-auto {
     position: absolute;
     display: flex;
@@ -144,9 +139,8 @@ html {
     background: $bg-cl;
 }
 
-
-/*Slider ----- end */
-
+// Fin del slider
+// Titulo de la pagina
 .Portada {
     grid-area: Portada;
     text-align: center;
@@ -155,6 +149,7 @@ html {
     text-shadow: 3px 3px 2px#3835357a;
 }
 
+// Google maps
 .Mapa {
     grid-area: Mapa;
     justify-content: center;
@@ -162,6 +157,7 @@ html {
     text-align: center;
 }
 
+// Fondo de montanas svg
 .Reservacion {
     grid-area: Reservacion;
     justify-content: center;
@@ -184,12 +180,10 @@ html {
     font-weight: bolder;
 }
 
-.Foto img,
 .forma {
     transition: transform 1s;
 }
 
-.Foto img:hover,
 .forma:hover {
     transform: scale(1.2);
     transition: transform 1s;
