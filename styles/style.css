@@ -1,0 +1,321 @@
+/*=====================================
+        Variables
+======================================*/
+/*=====================================
+        Body
+======================================*/
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*=====================================
+        Contenedor principal
+======================================*/
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 8vh 92vh;
+      grid-template-rows: 8vh 92vh;
+      grid-template-areas: "navbar navbar" "descripcion reservar";
+  background-size: cover;
+  -webkit-animation: animated-background 9s ease-in-out infinite;
+          animation: animated-background 9s ease-in-out infinite;
+}
+
+/*=====================================
+        Navegacion
+======================================*/
+.navbar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: navbar;
+  background-color: #ffffff73;
+}
+
+.navbar li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 50px;
+}
+
+.navbar a {
+  font-size: 3vh;
+  text-decoration: none;
+  color: #003a5c;
+  text-shadow: 3px 3px 2px #6AABD2;
+}
+
+.navbar a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*=====================================
+        Detalles
+======================================*/
+.descripcion {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: descripcion;
+  padding-top: 20%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #003a5c;
+  text-shadow: 3px 3px 2px #6AABD2;
+  font-weight: 600;
+}
+
+.descripcion .texto__descriptivo {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+  padding-top: 5px;
+  margin-top: -10px;
+}
+
+.descripcion .texto__descriptivo li {
+  color: #003a5c;
+  padding: 0 10px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: block;
+  font-size: 2.5rem;
+}
+
+.descripcion .titulo {
+  font-size: 2.8rem;
+}
+
+.descripcion .btn {
+  font-size: 2rem;
+  color: #6AABD2;
+  border-radius: 10px;
+  background-color: #003a5c;
+}
+
+.descripcion .btn:hover {
+  background-color: #bdccdf;
+}
+
+/*=====================================
+        Reservar un viaje
+======================================*/
+.reservar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: reservar;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reservar form {
+  display: inline-block;
+  margin: 5%;
+  padding: 7%;
+  border-radius: 10%;
+  height: 280px;
+  width: 200px;
+  background-color: #ffffff73;
+  -webkit-box-shadow: 4px 4px 8px #ededf856, -4px -4px 8px #3d3d3d80;
+          box-shadow: 4px 4px 8px #ededf856, -4px -4px 8px #3d3d3d80;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.reservar form input {
+  border-radius: 1em;
+}
+
+.reservar form .input-text:not(focus) {
+  width: 50px;
+  background-color: #bdccdf;
+}
+
+.reservar form .input-text:focus {
+  -webkit-animation: enlarge 0.5s;
+          animation: enlarge 0.5s;
+  width: 200px;
+  background-color: white;
+}
+
+.reservar .btn {
+  background-color: rgba(79, 105, 139, 0.3);
+  border-radius: 10px;
+}
+
+.reservar .btn:hover {
+  background-color: #bdccdf;
+}
+
+/*=====================================
+        Animacion del fondo
+======================================*/
+@-webkit-keyframes animated-background {
+  0%,
+  100% {
+    background-image: url(./background/1.jpg);
+  }
+  33% {
+    background-image: url(./background/2.jpg);
+  }
+  66% {
+    background-image: url(./background/3.jpg);
+  }
+}
+@keyframes animated-background {
+  0%,
+  100% {
+    background-image: url(./background/1.jpg);
+  }
+  33% {
+    background-image: url(./background/2.jpg);
+  }
+  66% {
+    background-image: url(./background/3.jpg);
+  }
+}
+
+/*=====================================
+        Animacion de texto
+======================================*/
+.flip2 {
+  -webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+  -webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@-webkit-keyframes flip3 {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip3 {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@-webkit-keyframes enlarge {
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

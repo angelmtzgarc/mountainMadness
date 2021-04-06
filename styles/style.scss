@@ -1,0 +1,233 @@
+/*=====================================
+        Variables
+======================================*/
+
+$glass:#ffffff73; //Efecto de vidrio
+$bg-cl:#6AABD2; //Sombra del texto
+$ft-cl:#003a5c; //Color de texto
+
+/*=====================================
+        Body
+======================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*=====================================
+        Contenedor principal
+======================================*/
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8vh 92vh;
+    grid-template-areas: "navbar navbar" "descripcion reservar";
+    background-size: cover;
+    animation: animated-background 9s ease-in-out infinite;
+}
+
+
+/*=====================================
+        Navegacion
+======================================*/
+
+.navbar {
+    grid-area: navbar;
+    background-color: $glass;
+    li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 50px;
+    }
+    a {
+        font-size: 3vh;
+        text-decoration: none;
+        color: $ft-cl;
+        text-shadow: 3px 3px 2px $bg-cl;
+    }
+    a:hover {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*=====================================
+        Detalles
+======================================*/
+
+.descripcion {
+    grid-area: descripcion;
+    padding-top: 20%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: $ft-cl;
+    text-shadow: 3px 3px 2px $bg-cl;
+    font-weight: 600;
+    .texto__descriptivo {
+        overflow: hidden;
+        position: relative;
+        height: 80px;
+        padding-top: 5px;
+        margin-top: -10px;
+        li {
+            color: $ft-cl;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+            font-size: 2.5rem;
+        }
+    }
+    .titulo {
+        font-size: 2.8rem;
+    }
+    .btn {
+        font-size: 2rem;
+        color: $bg-cl;
+        border-radius: 10px;
+        background-color: $ft-cl;
+    }
+    .btn:hover {
+        background-color: rgb(189, 204, 223);
+    }
+}
+
+
+/*=====================================
+        Reservar un viaje
+======================================*/
+
+.reservar {
+    grid-area: reservar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        display: inline-block;
+        margin: 5%;
+        padding: 7%;
+        border-radius: 10%;
+        height: 280px;
+        width: 200px;
+        background-color: $glass;
+        box-shadow: 4px 4px 8px #ededf856, -4px -4px 8px #3d3d3d80;
+        font-weight: bolder;
+        text-align: center;
+        input {
+            border-radius: 1em;
+        }
+        .input-text:not(focus) {
+            width: 50px;
+            background-color: rgb(189, 204, 223);
+        }
+        .input-text:focus {
+            animation: enlarge 0.5s;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+        }
+    }
+    .btn {
+        background-color: rgba(79, 105, 139, 0.3);
+        border-radius: 10px;
+    }
+    .btn:hover {
+        background-color: rgb(189, 204, 223);
+    }
+}
+
+
+/*=====================================
+        Animacion del fondo
+======================================*/
+
+@keyframes animated-background {
+    0%,
+    100% {
+        background-image: url(./background/1.jpg);
+    }
+    33% {
+        background-image: url(./background/2.jpg);
+    }
+    66% {
+        background-image: url(./background/3.jpg);
+    }
+}
+
+
+/*=====================================
+        Animacion de texto
+======================================*/
+
+.flip2 {
+    animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+    animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip2 {
+    0% {
+        margin-top: -180px;
+    }
+    5% {
+        margin-top: -90px;
+    }
+    50% {
+        margin-top: -90px;
+    }
+    55% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes flip3 {
+    0% {
+        margin-top: -270px;
+    }
+    5% {
+        margin-top: -180px;
+    }
+    33% {
+        margin-top: -180px;
+    }
+    38% {
+        margin-top: -90px;
+    }
+    66% {
+        margin-top: -90px;
+    }
+    71% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes enlarge {
+    0% {
+        width: 50px;
+    }
+    100% {
+        width: 200px;
+    }
+}
