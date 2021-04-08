@@ -38,7 +38,6 @@ body {
 .navbar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: navbar;
   background-color: #ffffff73;
 }
@@ -318,4 +317,51 @@ body {
     width: 200px;
   }
 }
+
+/*==========================================
+         Pagina de Locacion inicio
+===========================================*/
+.locationContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 8vh 92vh;
+      grid-template-rows: 8vh 92vh;
+      grid-template-areas: "navbar" "location";
+  -webkit-animation: animated-background 9s ease-in-out infinite;
+          animation: animated-background 9s ease-in-out infinite;
+}
+
+.locationContainer .location {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: location;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.locationContainer .location h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #003a5c;
+  text-shadow: 3px 3px 2px #6AABD2;
+  font-weight: 600;
+}
+
+.locationContainer .location .mapframe {
+  -webkit-box-shadow: 3px 2px 5px #003a5c;
+          box-shadow: 3px 2px 5px #003a5c;
+}
+
+/*==========================================
+         Pagina de Locacion fin
+===========================================*/
 /*# sourceMappingURL=style.css.map */

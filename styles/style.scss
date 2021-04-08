@@ -231,3 +231,42 @@ body {
         width: 200px;
     }
 }
+
+
+/*==========================================
+         Pagina de Locacion inicio
+===========================================*/
+
+.locationContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 92vh;
+    grid-template-areas: "navbar" "location";
+    animation: animated-background 9s ease-in-out infinite;
+    .location {
+        grid-area: location;
+        display: grid;
+        place-items: center;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            color: $ft-cl;
+            text-shadow: 3px 3px 2px $bg-cl;
+            font-weight: 600;
+        }
+        .mapframe {
+            box-shadow: 3px 2px 5px $ft-cl;
+        }
+    }
+}
+
+
+/*==========================================
+         Pagina de Locacion fin
+===========================================*/

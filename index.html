@@ -20,10 +20,10 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="">Location</a>
+                    <a href="./location.html">Location</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="javascript:about()">About</a>
                 </li>
             </ul>
         </div>
@@ -36,12 +36,13 @@
                     <li>Unbelievable Wildlife</li>
                 </ul>
             </div>
-
-            <p class="titulo"> Visit <br>
-                <span style="font-weight: bolder; font-style: italic;">
+            <div id="warning">
+                <p class="titulo"> Visit <br>
+                    <span style="font-weight: bolder; font-style: italic;">
                     The Mountains of Madness
                 </span>
-            </p>
+                </p>
+            </div>
 
             <!-- ========================================
                 Prueba de botones inicio
@@ -51,27 +52,33 @@
                 Book a trip now
            </button>
 
-            <!-- ========================================
-                    Prueba de botones fin
-                ==========================================-->
-
         </div>
+
+        <!-- ========================================
+                    Forma para reservacion
+                ==========================================-->
 
         <div class="reservar">
 
             <form class="forma" style="visibility: hidden;">
-                Full Name:<br>
-                <input class="input-text" type="text" class="whitespace">
-                <br><br>E-mail:<br>
-                <input class="input-text" type="text" class="whitespace">
-                <br><br>Phone Number:<br>
-                <input class="input-text" type="text"> <br>
-                <br>Booking Date:<br>
-                <input type="date">
+                Full Name:
                 <br><br>
-                <button class="btn" onclick="submit()">
-                    Submit
-                </button> </form>
+                <input class="input-text" type="text" id="name" required>
+                <br><br>
+                <label for="email">E-mail:</label>
+                <br><br>
+                <input class="input-text" type="email" name="email" required>
+                <br><br>
+                <label for="phone">Phone number:</label>
+                <br><br>
+                <input class="input-text" type="tel" name="phone" placeholder="8888888888" pattern="[0-9]{10}" maxlength="12" title="Ten digits code" required>
+                <br><br> Booking Date:<br>
+                <input type="date" required>
+                <br><br>
+                <button class="btn" type="submit">  <!-- funcion desechada: onclick="warning()" -->
+                     Submit
+                </button>
+            </form>
         </div>
     </div>
 
